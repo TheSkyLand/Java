@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class java6 {
     public static void main(String[] args) {
-
+        //lab7
         int column = 0;
 
         double a[][] = {
@@ -30,3 +30,4 @@ public class java6 {
         
     }
 }
+
