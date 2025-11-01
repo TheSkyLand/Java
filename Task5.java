@@ -14,7 +14,7 @@ public class Task5 {
         System.out.println(Arrays.toString(b));
         System.out.println("Максимальное значение - " + getMin(b));
         System.out.println("Максимальное значение - " + getMax(b));
-        getMin(b);
+        getMax(b);
         getMin(b);
     }
     public static double getMax(double [] arr){
@@ -42,3 +42,4 @@ public class Task5 {
         return min;
     }
 }
+
