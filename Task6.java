@@ -1,32 +1,32 @@
-
 import java.util.Arrays;
+import java.util.Scanner;
 
-public class Task6 {
-
+public class java6 {
     public static void main(String[] args) {
 
-        int[][] a = {
-            {7, 6, 2},
-            {2, 3, 4},
-            {1, 2, 3},
-            {4, 3, 5},
+        int column = 0;
+
+        double a[][] = {
+                { 1, 2, 3, 4, 5, },
+                { 5, 4, 3, 2, 1, },
+                { 2, 3, 4, 5, 6, },
         };
-        int shift = 2;
+        double b[][] = {};
 
-        System.out.println("Original Array: " + Arrays.toString(a));
+        for (int i = 0; i < a.length; i++) {
+            
+            System.out.print(a[i][0]);
+            b[i][0] += a[i][0];
+            column++;
 
-        for (int s = 0; s < shift; s++) {
-            int temp = a[a.length - 1][a.length - 1];
-
-            for (int i = 0; i < a.length; i++) {
-                for (int j = 0; j < a[i].length; j++) {
-                    a[i][j] = a[i - 1][j - 1];
-                }
-                System.out.println();
+            System.out.print(" |");
+            System.out.print(" ");
+            for (int j = 0; j < a[i].length; j++) {
+                System.out.print(a[i][j]);
+                System.out.print(" ");
             }
-            a[0][0] = temp;
+            System.out.print('\n');
         }
-        System.out.println("Shifted Array: " + Arrays.toString(a));
+        
     }
-
 }
