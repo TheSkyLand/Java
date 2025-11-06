@@ -4,18 +4,17 @@ public class task6 {
     public static void main(String[] args) {
         // lab7
 
-        double a[][] = {
-                { 1, 2, 4, 6 },
-                { 5, 4, 9, 8 }
+        double[][] a = new double[][] {
+                new double[] { 1, 2, 3, 6, 4, 6 },
+                new double[] { 5, 4, 5, 7, 9, 8 },
+                new double[] { 5, 4, 5, 7, 9, 8 },
         };
         double b[] = new double[a.length];
         double c[] = new double[a.length];
 
-        int lenx = 3;
-        int leny = 2;
-
+        int len = a[0].length;
         int firstColumn = 0;
-        int lastColumn = a.length;
+        int lastColumn = len - 1;
 
         System.out.println("Initiation array");
         System.out.println("----------------");
@@ -29,22 +28,26 @@ public class task6 {
 
         System.out.println("----------------");
 
-        for (int i = 0; i < 3; i++) {
-            c[i] = a[i][lastColumn];
-            b[i] = a[i][firstColumn];
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a.length; j++) {
+                c[j] = a[j][lastColumn];
+                b[j] = a[j][firstColumn];
 
-            a[i][firstColumn] = c[i];
-            a[i][lastColumn] = b[i];
+                a[j][firstColumn] = c[j];
+                a[j][lastColumn] = b[j];
+            }
 
+            firstColumn++;
+            lastColumn--;
 
-            System.out.print(a[i][0]);
-            System.out.print(" |");
-            System.out.print(" ");
+        }
+        for (int i = 0; i < a.length; i++) {
             for (int j = 0; j < a[i].length; j++) {
                 System.out.print(a[i][j]);
                 System.out.print(" ");
             }
             System.out.print('\n');
         }
+
     }
 }
