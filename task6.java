@@ -2,15 +2,17 @@
 public class task6 {
 
     public static void main(String[] args) {
-        //lab7
+        // lab7
 
         double a[][] = {
-            {1, 2, 4, 6},
-            {5, 4, 9, 8},
-            {3, 6, 3, 7}
+                { 1, 2, 4, 6 },
+                { 5, 4, 9, 8 }
         };
         double b[] = new double[a.length];
         double c[] = new double[a.length];
+
+        int lenx = 3;
+        int leny = 2;
 
         int firstColumn = 0;
         int lastColumn = a.length;
@@ -27,12 +29,13 @@ public class task6 {
 
         System.out.println("----------------");
 
-        for (int i = 0; i < a.length; i++) {
+        for (int i = 0; i < 3; i++) {
             c[i] = a[i][lastColumn];
             b[i] = a[i][firstColumn];
 
             a[i][firstColumn] = c[i];
             a[i][lastColumn] = b[i];
+
 
             System.out.print(a[i][0]);
             System.out.print(" |");
